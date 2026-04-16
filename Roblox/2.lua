@@ -2514,6 +2514,7 @@ function init()
 	end
 end
 
-init()
+local success, err = pcall(function() init() end)
+if success then require(script.Parent.C) else warn(err) end
 
 return r
